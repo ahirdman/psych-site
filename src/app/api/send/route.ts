@@ -18,9 +18,10 @@ export async function POST(request: NextRequest) {
 
   try {
     const { data, error } = await resend.emails.send({
-      from: 'Site <contact-form@resend.dev>',
+      //from: 'Site <contact-form@resend.dev>',
+      from: 'Contact Form <noreply@contact.thielhultcrantz.com>',
       to: [emailReceiver],
-      subject: 'Hello world',
+      subject: 'Meddelande från kontaktformuläret',
       react: EmailTemplate({ name, email, phoneNumber, message }),
     });
 
