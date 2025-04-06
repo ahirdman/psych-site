@@ -6,9 +6,8 @@ import { Inter } from 'next/font/google';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Professional Psychotherapy Services',
-  description:
-    'Dedicated psychotherapy services to help you on your journey to mental wellness.',
+  title: 'Tomas Tiel Hultcrantz - Psykoterapi',
+  description: 'Psykoterapi och psykologisk behandling i Stockholm',
 };
 
 export default function RootLayout({
