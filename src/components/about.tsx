@@ -8,27 +8,13 @@ export default function About() {
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center">
             Psykoterapi
           </h2>
-          <div className="space-y-6 text-muted-foreground">
-            <p>
-              Affektfokuserad psykoterapi är en samling av metoder som betonar
-              känslornas centrala roll i psykisk hälsa och förändring och utgår
-              från att många psykologiska problem uppstår när känslor undviks,
-              undertrycks eller blir överväldigande. De bygger på
-              neurovetenskaplig och anknytningsteoretisk forskning och syftar
-              till att hjälpa dig att identifiera, utrycka och hitta mer
-              konstruktiva sätt att uppleva och hantera känslor. Gemensamt för
-              dessa terapiformer är betoningen på känslors betydelse, en trygg
-              terapeutisk relation och en processinriktad arbetsmodell där du
-              lär dig möta och integrera dina känslor på ett mer adaptivt sätt.
-            </p>
-          </div>
         </div>
 
         <div className="max-w-5xl mx-auto">
           <Card className="mb-12">
             <CardContent className="p-6">
               <h3 className="text-xl font-semibold mb-4">
-                Om affektfokuserad psykoterapi
+                Metoder jag använder
               </h3>
               <div className="space-y-4 text-muted-foreground">
                 <h4 className="font-medium">

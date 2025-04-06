@@ -30,8 +30,24 @@ export default function Contact() {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1500));
+    const res = await fetch('/api/send', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        name: formState.name,
+        email: formState.email,
+        phoneNumber: formState.phone,
+        message: formState.message,
+      }),
+    });
+
+    if (!res.ok) {
+      console.error('Error sending email:', res.statusText);
+      setIsSubmitting(false);
+      return;
+    }
 
     setIsSubmitting(false);
     setIsSubmitted(true);
