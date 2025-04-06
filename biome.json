@@ -1,30 +1,68 @@
 {
-	"$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
-	"vcs": {
-		"enabled": false,
-		"clientKind": "git",
-		"useIgnoreFile": false
-	},
-	"files": {
-		"ignoreUnknown": false,
-		"ignore": []
-	},
-	"formatter": {
-		"enabled": true,
-		"indentStyle": "tab"
-	},
-	"organizeImports": {
-		"enabled": true
-	},
-	"linter": {
-		"enabled": true,
-		"rules": {
-			"recommended": true
-		}
-	},
-	"javascript": {
-		"formatter": {
-			"quoteStyle": "double"
-		}
-	}
+  "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
+  "formatter": {
+    "enabled": true,
+    "formatWithErrors": false,
+    "indentStyle": "space",
+    "indentWidth": 2,
+    "lineEnding": "lf",
+    "lineWidth": 80,
+    "attributePosition": "auto",
+    "ignore": ["**/public", "tsconfig.json"]
+  },
+  "organizeImports": {
+    "enabled": true,
+    "ignore": [".next/**"]
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "recommended": true,
+      "complexity": {
+        "noExcessiveCognitiveComplexity": "warn"
+      },
+      "correctness": {
+        "noUnusedVariables": "warn",
+        "noChildrenProp": "off",
+        "noUnusedImports": "warn"
+      },
+      "style": {
+        "useBlockStatements": "off",
+        "useImportType": "off"
+      },
+      "suspicious": {
+        "noConsoleLog": "warn"
+      },
+      "a11y": {
+        "noSvgWithoutTitle": "off",
+        "useKeyWithClickEvents": "off",
+        "useValidAriaRole": "off"
+      }
+    },
+    "ignore": ["**/dist/", "**/*.config.ts", "**/public", ".next/**"]
+  },
+  "javascript": {
+    "formatter": {
+      "quoteStyle": "single",
+      "arrowParentheses": "always",
+      "jsxQuoteStyle": "double",
+      "semicolons": "always",
+      "trailingCommas": "all",
+      "quoteProperties": "asNeeded",
+      "bracketSpacing": true,
+      "bracketSameLine": false,
+      "indentStyle": "space",
+      "indentWidth": 2
+    },
+    "parser": {
+      "unsafeParameterDecoratorsEnabled": true
+    }
+  },
+  "vcs": {
+    "enabled": true,
+    "clientKind": "git",
+    "useIgnoreFile": true,
+    "defaultBranch": "main"
+  },
+  "overrides": []
 }
