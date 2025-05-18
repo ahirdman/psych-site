@@ -60,10 +60,15 @@ export default function Contact() {
   };
 
   return (
-    <section className="py-20 bg-muted/30">
+    <section className="py-20 bg-muted/30" aria-labelledby="contact-heading">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Kontakt</h2>
+          <h2
+            id="contact-heading"
+            className="text-3xl md:text-4xl font-bold mb-4"
+          >
+            Kontakt
+          </h2>
           <p className="text-xl text-muted-foreground">
             Välkommen att kontakta mig för att boka tid eller ställa frågor.
           </p>
@@ -72,10 +77,19 @@ export default function Contact() {
         <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           <Card>
             <CardContent className="p-6">
-              <h3 className="text-2xl font-semibold mb-6">Kontakta mig</h3>
+              <h3
+                id="kontakt-form-heading"
+                className="text-2xl font-semibold mb-6"
+              >
+                Kontakta mig
+              </h3>
 
               {isSubmitted ? (
-                <div className="bg-primary/10 border border-primary/20 rounded-lg p-6 text-center">
+                <div
+                  className="bg-primary/10 border border-primary/20 rounded-lg p-6 text-center"
+                  role="alert"
+                  aria-live="polite"
+                >
                   <h4 className="text-xl font-medium mb-2">
                     Tack för ditt meddelande!
                   </h4>
@@ -84,7 +98,11 @@ export default function Contact() {
                   </p>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} className="space-y-4">
+                <form
+                  onSubmit={handleSubmit}
+                  className="space-y-4"
+                  aria-labelledby="kontakt-form-heading"
+                >
                   <div>
                     <label
                       htmlFor="name"
@@ -117,6 +135,7 @@ export default function Contact() {
                       onChange={handleChange}
                       required
                       placeholder="din.epost@exempel.se"
+                      aria-describedby="email-desc"
                     />
                   </div>
 
@@ -134,6 +153,7 @@ export default function Contact() {
                       value={formState.phone}
                       onChange={handleChange}
                       placeholder="070 123 45 67"
+                      aria-describedby="phone-desc"
                     />
                   </div>
 
@@ -152,6 +172,7 @@ export default function Contact() {
                       required
                       placeholder="Berätta kort om vad du söker hjälp med..."
                       rows={5}
+                      aria-describedby="message-desc"
                     />
                   </div>
 
@@ -160,6 +181,7 @@ export default function Contact() {
                     className="w-full"
                     size="lg"
                     disabled={isSubmitting}
+                    aria-label="Skicka ditt meddelande"
                   >
                     {isSubmitting ? 'Skickar...' : 'Skicka meddelande'}
                   </Button>
@@ -176,7 +198,12 @@ export default function Contact() {
                     <MapPin className="size-5 text-primary" />
                   </div>
                   <div>
-                    <h4 className="text-lg font-medium mb-1">Adress</h4>
+                    <h4
+                      id="adress-heading"
+                      className="text-lg font-medium mb-1"
+                    >
+                      Adress
+                    </h4>
                     <p className="text-muted-foreground">Hantverkargatan 46</p>
                     <p className="text-muted-foreground">112 21 Stockholm</p>
                   </div>
@@ -191,8 +218,18 @@ export default function Contact() {
                     <Phone className="size-5 text-primary" />
                   </div>
                   <div>
-                    <h4 className="text-lg font-medium mb-1">Telefon</h4>
-                    <p className="text-muted-foreground">070 710 0490</p>
+                    <h4
+                      id="telefon-heading"
+                      className="text-lg font-medium mb-1"
+                    >
+                      Telefon
+                    </h4>
+                    <a
+                      href="tel:+46707100490"
+                      className="text-muted-foreground hover:text-primary hover:underline"
+                    >
+                      070 710 0490
+                    </a>
                   </div>
                 </div>
               </CardContent>
@@ -205,10 +242,15 @@ export default function Contact() {
                     <Mail className="size-5 text-primary" />
                   </div>
                   <div>
-                    <h4 className="text-lg font-medium mb-1">E-post</h4>
-                    <p className="text-muted-foreground">
+                    <h4 id="epost-heading" className="text-lg font-medium mb-1">
+                      E-post
+                    </h4>
+                    <a
+                      href="mailto:tomas.hultcrantz@icloud.com"
+                      className="text-muted-foreground hover:text-primary hover:underline"
+                    >
                       tomas.hultcrantz@icloud.com
-                    </p>
+                    </a>
                   </div>
                 </div>
               </CardContent>
@@ -221,7 +263,12 @@ export default function Contact() {
                     <Clock className="size-5 text-primary" />
                   </div>
                   <div>
-                    <h4 className="text-lg font-medium mb-1">Priser</h4>
+                    <h4
+                      id="priser-heading"
+                      className="text-lg font-medium mb-1"
+                    >
+                      Priser
+                    </h4>
                     <p className="text-muted-foreground">
                       Psykoterapi: 1200kr / 50 min
                     </p>

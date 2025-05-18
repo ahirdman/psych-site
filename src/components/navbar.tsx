@@ -46,19 +46,26 @@ export default function Navbar() {
   };
 
   return (
-    <nav
+    <header
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-background/95 shadow-md backdrop-blur-sm' : 'bg-transparent'}`}
     >
       <div className="container mx-auto px-4 py-3">
         <div className="flex items-center justify-between">
           <div className="text-xl font-semibold">
-            <Link href="#home" onClick={handleNavClick}>
+            <Link
+              href="#home"
+              onClick={handleNavClick}
+              aria-label="Till startsidan"
+            >
               Tomas Thiel Hultcrantz
             </Link>
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-6">
+          <nav
+            className="hidden md:flex space-x-6"
+            aria-label="Huvudnavigering"
+          >
             {navItems.map((item) => (
               <Link
                 key={item.name}
@@ -69,7 +76,7 @@ export default function Navbar() {
                 {item.name}
               </Link>
             ))}
-          </div>
+          </nav>
 
           {/* Mobile Navigation Toggle */}
           <div className="md:hidden">
@@ -78,6 +85,8 @@ export default function Navbar() {
               size="icon"
               onClick={() => setIsOpen(!isOpen)}
               aria-label={isOpen ? 'Stäng meny' : 'Öppna meny'}
+              aria-expanded={isOpen}
+              aria-controls="mobile-menu"
             >
               {isOpen ? <X className="size-6" /> : <Menu className="size-6" />}
             </Button>
@@ -86,7 +95,11 @@ export default function Navbar() {
 
         {/* Mobile Navigation Menu */}
         {isOpen && (
-          <div className="md:hidden absolute top-full left-0 right-0 bg-background shadow-md py-4 px-4">
+          <nav
+            id="mobile-menu"
+            className="md:hidden absolute top-full left-0 right-0 bg-background shadow-md py-4 px-4"
+            aria-label="Mobilnavigering"
+          >
             <div className="flex flex-col space-y-4">
               {navItems.map((item) => (
                 <Link
@@ -99,9 +112,9 @@ export default function Navbar() {
                 </Link>
               ))}
             </div>
-          </div>
+          </nav>
         )}
       </div>
-    </nav>
+    </header>
   );
 }

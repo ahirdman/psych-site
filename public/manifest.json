@@ -1,0 +1,21 @@
+{
+  "name": "Tomas Thiel Hultcrantz - Psykoterapi Stockholm",
+  "short_name": "Psykoterapi Stockholm",
+  "description": "Professionell psykoterapi och psykologisk behandling i Stockholm. Specialiserad på individ- och parterapi.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "type": "image/x-icon",
+      "sizes": "16x16 32x32"
+    }
+  ],
+  "lang": "sv-SE",
+  "dir": "ltr",
+  "categories": ["health", "medical", "therapy"],
+  "related_applications": []
+}

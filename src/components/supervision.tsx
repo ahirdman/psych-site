@@ -3,10 +3,18 @@ import { User, Users } from 'lucide-react';
 
 export default function Supervision() {
   return (
-    <section className="py-20 bg-muted/30">
+    <section
+      className="py-20 bg-muted/30"
+      aria-labelledby="supervision-heading"
+    >
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Handledning</h2>
+          <h2
+            id="supervision-heading"
+            className="text-3xl md:text-4xl font-bold mb-4"
+          >
+            Handledning
+          </h2>
           <p className="text-xl text-muted-foreground">
             Handledning är en viktig del i utvecklingen för psykoterapeuter och
             andra yrkesverksamma inom vård och behandling. Genom handledning får
@@ -26,12 +34,15 @@ export default function Supervision() {
         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           <Card>
             <CardContent className="p-6">
-              <div className="flex justify-center mb-6">
+              <div className="flex justify-center mb-6" aria-hidden="true">
                 <div className="p-3 bg-primary/10 rounded-full">
                   <User className="size-8 text-primary" />
                 </div>
               </div>
-              <h3 className="text-xl font-semibold text-center mb-4">
+              <h3
+                id="individual-supervision-heading"
+                className="text-xl font-semibold text-center mb-4"
+              >
                 Individuell handledning
               </h3>
               <p className="text-muted-foreground">
@@ -48,12 +59,15 @@ export default function Supervision() {
 
           <Card>
             <CardContent className="p-6">
-              <div className="flex justify-center mb-6">
+              <div className="flex justify-center mb-6" aria-hidden="true">
                 <div className="p-3 bg-primary/10 rounded-full">
                   <Users className="size-8 text-primary" />
                 </div>
               </div>
-              <h3 className="text-xl font-semibold text-center mb-4">
+              <h3
+                id="group-supervision-heading"
+                className="text-xl font-semibold text-center mb-4"
+              >
                 Grupphandledning
               </h3>
               <p className="text-muted-foreground">
