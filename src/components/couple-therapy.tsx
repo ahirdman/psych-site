@@ -3,16 +3,25 @@ import { Heart } from 'lucide-react';
 
 export default function CoupleTherapy() {
   return (
-    <section className="py-20 bg-background">
+    <section
+      className="py-20 bg-background"
+      aria-labelledby="couple-therapy-heading"
+    >
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <Card>
             <CardContent className="p-8">
               <div className="flex flex-col items-center mb-8">
-                <div className="p-4 bg-primary/10 rounded-full mb-6">
+                <div
+                  className="p-4 bg-primary/10 rounded-full mb-6"
+                  aria-hidden="true"
+                >
                   <Heart className="size-12 text-primary" />
                 </div>
-                <h2 className="text-3xl md:text-4xl font-bold text-center">
+                <h2
+                  id="couple-therapy-heading"
+                  className="text-3xl md:text-4xl font-bold text-center"
+                >
                   Parterapi
                 </h2>
               </div>

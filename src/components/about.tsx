@@ -2,10 +2,16 @@ import { Card, CardContent } from '@/components/ui/card';
 
 export default function About() {
   return (
-    <section className="py-20 bg-muted/30">
+    <section
+      className="py-20 bg-muted/30"
+      aria-labelledby="psykoterapi-heading"
+    >
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center">
+          <h2
+            id="psykoterapi-heading"
+            className="text-3xl md:text-4xl font-bold mb-6 text-center"
+          >
             Psykoterapi
           </h2>
         </div>
@@ -13,11 +19,11 @@ export default function About() {
         <div className="max-w-5xl mx-auto">
           <Card className="mb-12">
             <CardContent className="p-6">
-              <h3 className="text-xl font-semibold mb-4">
+              <h3 id="metoder-heading" className="text-xl font-semibold mb-4">
                 Metoder jag använder
               </h3>
               <div className="space-y-4 text-muted-foreground">
-                <h4 className="font-medium">
+                <h4 className="font-medium" id="aft-heading">
                   Affektfokuserad/ affektfobiterapi (AFT)
                 </h4>
                 <p>
@@ -32,7 +38,7 @@ export default function About() {
                   känslorna, även i vuxen ålder.
                 </p>
 
-                <h4 className="font-medium">
+                <h4 className="font-medium" id="aedp-heading">
                   Accelerated experiential dynamic psychotherapy (AEDP)
                 </h4>
                 <p>
@@ -69,7 +75,9 @@ export default function About() {
                   redo för.
                 </p>
 
-                <h4 className="font-medium">Emotion Focused Therapy (EFT)</h4>
+                <h4 className="font-medium" id="eft-heading">
+                  Emotion Focused Therapy (EFT)
+                </h4>
                 <p>
                   En central idé i EFT är att alla våra känslor rymmer
                   information. De signalerar vad vi behöver eller vad som är
@@ -107,7 +115,9 @@ export default function About() {
 
           <Card>
             <CardContent className="p-6">
-              <h3 className="text-xl font-semibold mb-4">Om KBT</h3>
+              <h3 id="kbt-heading" className="text-xl font-semibold mb-4">
+                Om KBT
+              </h3>
               <div className="space-y-4 text-muted-foreground">
                 <p>
                   Ibland vet vi vad vi känner och tänker, men fastnar ändå i
@@ -118,7 +128,7 @@ export default function About() {
                 <p>Jag arbetar med:</p>
                 <div className="space-y-6 mt-4">
                   <div className="border-l-4 border-primary/20 pl-4 py-2">
-                    <h4 className="font-medium">
+                    <h4 className="font-medium" id="act-heading">
                       ACT (Acceptance and Commitment Therapy)
                     </h4>
                     <p className="mt-2">
@@ -130,7 +140,9 @@ export default function About() {
                   </div>
 
                   <div className="border-l-4 border-primary/20 pl-4 py-2">
-                    <h4 className="font-medium">Schematerapi</h4>
+                    <h4 className="font-medium" id="schema-heading">
+                      Schematerapi
+                    </h4>
                     <p className="mt-2">
                       Går på djupet med de livsmönster som ofta upprepas i
                       relationer eller gentemot dig själv. Vi kartlägger,
@@ -141,7 +153,7 @@ export default function About() {
                   </div>
 
                   <div className="border-l-4 border-primary/20 pl-4 py-2">
-                    <h4 className="font-medium">
+                    <h4 className="font-medium" id="cft-heading">
                       Compassionfokuserad terapi (CFT)
                     </h4>
                     <p className="mt-2">

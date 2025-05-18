@@ -3,10 +3,13 @@ import { Brain, Heart, Lightbulb, Sparkles } from 'lucide-react';
 
 export default function Methods() {
   return (
-    <section className="py-20 bg-background">
+    <section className="py-20 bg-background" aria-labelledby="methods-heading">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <h2
+            id="methods-heading"
+            className="text-3xl md:text-4xl font-bold mb-4"
+          >
             Mina terapeutiska metoder
           </h2>
           <p className="text-xl text-muted-foreground">
@@ -19,12 +22,15 @@ export default function Methods() {
           {/* Method 1 */}
           <Card>
             <CardContent className="p-6">
-              <div className="flex justify-center mb-6">
+              <div className="flex justify-center mb-6" aria-hidden="true">
                 <div className="p-3 bg-primary/10 rounded-full">
                   <Heart className="size-8 text-primary" />
                 </div>
               </div>
-              <h3 className="text-xl font-semibold text-center mb-4">
+              <h3
+                id="aft-heading"
+                className="text-xl font-semibold text-center mb-4"
+              >
                 Affektfokuserad psykodynamisk terapi (AFT)
               </h3>
               <p className="text-muted-foreground mb-4 text-center">
@@ -33,17 +39,26 @@ export default function Methods() {
                 rädslor och undvikanden som uppstått genom tidigare
                 erfarenheter.
               </p>
-              <ul className="space-y-2 text-muted-foreground">
+              <ul
+                className="space-y-2 text-muted-foreground"
+                aria-labelledby="aft-heading"
+              >
                 <li className="flex items-start">
-                  <span className="text-primary mr-2">•</span>
+                  <span className="text-primary mr-2" aria-hidden="true">
+                    •
+                  </span>
                   <span>Bygger på anknytningsteori</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-primary mr-2">•</span>
+                  <span className="text-primary mr-2" aria-hidden="true">
+                    •
+                  </span>
                   <span>Hjälper dig hantera känslor du tidigare undvikit</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-primary mr-2">•</span>
+                  <span className="text-primary mr-2" aria-hidden="true">
+                    •
+                  </span>
                   <span>Skapar nya, mer konstruktiva känslomönster</span>
                 </li>
               </ul>
@@ -53,12 +68,15 @@ export default function Methods() {
           {/* Method 2 */}
           <Card>
             <CardContent className="p-6">
-              <div className="flex justify-center mb-6">
+              <div className="flex justify-center mb-6" aria-hidden="true">
                 <div className="p-3 bg-primary/10 rounded-full">
                   <Brain className="size-8 text-primary" />
                 </div>
               </div>
-              <h3 className="text-xl font-semibold text-center mb-4">
+              <h3
+                id="aedp-heading"
+                className="text-xl font-semibold text-center mb-4"
+              >
                 Accelerated Experiential Dynamic Psychotherapy (AEDP)
               </h3>
               <p className="text-muted-foreground mb-4 text-center">
@@ -67,17 +85,26 @@ export default function Methods() {
                 som en aktiv, stöttande guide som är med dig varje steg på
                 vägen.
               </p>
-              <ul className="space-y-2 text-muted-foreground">
+              <ul
+                className="space-y-2 text-muted-foreground"
+                aria-labelledby="aedp-heading"
+              >
                 <li className="flex items-start">
-                  <span className="text-primary mr-2">•</span>
+                  <span className="text-primary mr-2" aria-hidden="true">
+                    •
+                  </span>
                   <span>Skapar en trygg bas i terapirummet</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-primary mr-2">•</span>
+                  <span className="text-primary mr-2" aria-hidden="true">
+                    •
+                  </span>
                   <span>Utforskar gradvis smärtsamma känslor</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-primary mr-2">•</span>
+                  <span className="text-primary mr-2" aria-hidden="true">
+                    •
+                  </span>
                   <span>Stärker dina friska, motståndskraftiga sidor</span>
                 </li>
               </ul>
@@ -87,12 +114,15 @@ export default function Methods() {
           {/* Method 3 */}
           <Card>
             <CardContent className="p-6">
-              <div className="flex justify-center mb-6">
+              <div className="flex justify-center mb-6" aria-hidden="true">
                 <div className="p-3 bg-primary/10 rounded-full">
                   <Sparkles className="size-8 text-primary" />
                 </div>
               </div>
-              <h3 className="text-xl font-semibold text-center mb-4">
+              <h3
+                id="eft-heading"
+                className="text-xl font-semibold text-center mb-4"
+              >
                 Emotionellt fokuserad terapi (EFT)
               </h3>
               <p className="text-muted-foreground mb-4 text-center">
@@ -101,17 +131,26 @@ export default function Methods() {
                 EFT-terapi hjälper dig att komma bakom sekundära känslor och
                 hitta kärnan.
               </p>
-              <ul className="space-y-2 text-muted-foreground">
+              <ul
+                className="space-y-2 text-muted-foreground"
+                aria-labelledby="eft-heading"
+              >
                 <li className="flex items-start">
-                  <span className="text-primary mr-2">•</span>
+                  <span className="text-primary mr-2" aria-hidden="true">
+                    •
+                  </span>
                   <span>Skiljer mellan primära och sekundära känslor</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-primary mr-2">•</span>
+                  <span className="text-primary mr-2" aria-hidden="true">
+                    •
+                  </span>
                   <span>Förändrar maladaptiva känslomönster</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-primary mr-2">•</span>
+                  <span className="text-primary mr-2" aria-hidden="true">
+                    •
+                  </span>
                   <span>Ersätter smärtsamma känslor med läkande känslor</span>
                 </li>
               </ul>
@@ -121,12 +160,15 @@ export default function Methods() {
           {/* Method 4 */}
           <Card>
             <CardContent className="p-6">
-              <div className="flex justify-center mb-6">
+              <div className="flex justify-center mb-6" aria-hidden="true">
                 <div className="p-3 bg-primary/10 rounded-full">
                   <Lightbulb className="size-8 text-primary" />
                 </div>
               </div>
-              <h3 className="text-xl font-semibold text-center mb-4">
+              <h3
+                id="kbt-heading"
+                className="text-xl font-semibold text-center mb-4"
+              >
                 Kognitiv beteendeterapi (KBT)
               </h3>
               <p className="text-muted-foreground mb-4 text-center">
@@ -134,21 +176,30 @@ export default function Methods() {
                 livet mindre levande, kan KBT hjälpa oss att få syn på de
                 mönster vi fastnat i och steg för steg skapa förändring.
               </p>
-              <ul className="space-y-2 text-muted-foreground">
+              <ul
+                className="space-y-2 text-muted-foreground"
+                aria-labelledby="kbt-heading"
+              >
                 <li className="flex items-start">
-                  <span className="text-primary mr-2">•</span>
+                  <span className="text-primary mr-2" aria-hidden="true">
+                    •
+                  </span>
                   <span>
                     ACT: Hjälper dig fokusera på det som är viktigt för dig
                   </span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-primary mr-2">•</span>
+                  <span className="text-primary mr-2" aria-hidden="true">
+                    •
+                  </span>
                   <span>
                     Schematerapi: Går på djupet med upprepande livsmönster
                   </span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-primary mr-2">•</span>
+                  <span className="text-primary mr-2" aria-hidden="true">
+                    •
+                  </span>
                   <span>
                     Compassionfokuserad terapi: För självkritik och skam
                   </span>
