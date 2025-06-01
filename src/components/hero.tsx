@@ -2,8 +2,6 @@ import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 import Link from 'next/link';
 
-import profilePic from '../../public/images/therapist.jpg';
-
 export default function Hero() {
   return (
     <section
@@ -72,7 +70,7 @@ export default function Hero() {
           <div className="md:col-span-2 order-1 md:order-2 flex justify-center md:justify-end">
             <div className="relative w-64 h-64 md:w-full md:h-auto aspect-square rounded-full overflow-hidden border-8 border-background shadow-xl">
               <Image
-                src={profilePic}
+                src="/images/therapist.jpg"
                 alt="Tomas Thiel Hultcrantz, Legitimerad psykoterapeut"
                 fill
                 priority

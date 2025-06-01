@@ -3,9 +3,11 @@
 import type React from 'react';
 
 import { Button } from '@/components/ui/button';
+import { cn } from '@/lib/utils';
 import { Menu, X } from 'lucide-react';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
+import { BookButton } from './book-button';
 
 const navItems = [
   { name: 'Hem', href: '#home' },
@@ -47,9 +49,14 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-background/95 shadow-md backdrop-blur-sm' : 'bg-transparent'}`}
+      className={cn(
+        'fixed top-0 w-full z-50 transition-all duration-300',
+        scrolled
+          ? 'bg-background/95 shadow-md backdrop-blur-sm'
+          : 'bg-transparent',
+      )}
     >
-      <div className="container mx-auto px-4 py-3">
+      <div className="px-4 py-3">
         <div className="flex items-center justify-between">
           <div className="text-xl font-semibold">
             <Link
@@ -61,9 +68,8 @@ export default function Navbar() {
             </Link>
           </div>
 
-          {/* Desktop Navigation */}
           <nav
-            className="hidden md:flex space-x-6"
+            className="hidden lg:flex space-x-6 md:items-center"
             aria-label="Huvudnavigering"
           >
             {navItems.map((item) => (
@@ -71,15 +77,16 @@ export default function Navbar() {
                 key={item.name}
                 href={item.href}
                 onClick={handleNavClick}
-                className="text-foreground/80 hover:text-foreground transition-colors"
+                className="text-foreground/80 hover:text-foreground transition-colors hover:underline"
               >
                 {item.name}
               </Link>
             ))}
+
+            <BookButton />
           </nav>
 
-          {/* Mobile Navigation Toggle */}
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <Button
               variant="ghost"
               size="icon"
@@ -93,14 +100,13 @@ export default function Navbar() {
           </div>
         </div>
 
-        {/* Mobile Navigation Menu */}
         {isOpen && (
           <nav
             id="mobile-menu"
-            className="md:hidden absolute top-full left-0 right-0 bg-background shadow-md py-4 px-4"
+            className="lg:hidden absolute top-full left-0 right-0 bg-background shadow-md py-4 px-4"
             aria-label="Mobilnavigering"
           >
-            <div className="flex flex-col space-y-4">
+            <div className="flex flex-col gap-4">
               {navItems.map((item) => (
                 <Link
                   key={item.name}
@@ -111,6 +117,8 @@ export default function Navbar() {
                   {item.name}
                 </Link>
               ))}
+
+              <BookButton />
             </div>
           </nav>
         )}
