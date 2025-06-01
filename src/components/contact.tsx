@@ -8,6 +8,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Clock, Mail, MapPin, Phone } from 'lucide-react';
 import { useState } from 'react';
+import { BookButton } from './book-button';
 
 export default function Contact() {
   const [formState, setFormState] = useState({
@@ -62,7 +63,7 @@ export default function Contact() {
   return (
     <section className="py-20 bg-muted/30" aria-labelledby="contact-heading">
       <div className="container mx-auto px-4">
-        <div className="max-w-3xl mx-auto text-center mb-16">
+        <div className="max-w-3xl mx-auto text-center mb-16 space-y-4">
           <h2
             id="contact-heading"
             className="text-3xl md:text-4xl font-bold mb-4"
@@ -72,6 +73,8 @@ export default function Contact() {
           <p className="text-xl text-muted-foreground">
             Välkommen att kontakta mig för att boka tid eller ställa frågor.
           </p>
+
+          <BookButton className="min-w-52" />
         </div>
 
         <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
