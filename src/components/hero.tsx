@@ -1,6 +1,7 @@
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 import Link from 'next/link';
+import { BookButton } from './book-button';
 
 export default function Hero() {
   return (
@@ -56,15 +57,8 @@ export default function Hero() {
                 att förhålla dig till dig själv och andra.
               </p>
             </div>
-            <div className="mt-8">
-              <Button asChild size="lg">
-                <Link
-                  href="#contact"
-                  aria-label="Gå till kontaktformulär för att boka tid"
-                >
-                  Boka tid
-                </Link>
-              </Button>
+            <div className="mt-8 lg:hidden">
+              <BookButton />
             </div>
           </div>
           <div className="md:col-span-2 order-1 md:order-2 flex justify-center md:justify-end">
